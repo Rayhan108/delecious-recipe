@@ -36,7 +36,7 @@ const NavigationBar = () => {
               </div>
 
               <Link to="/login">
-                <Button variant="secondary">Login</Button>
+                <Button to="/login" variant="secondary">Login</Button>
               </Link>
             </Nav>
           </Navbar.Collapse>
