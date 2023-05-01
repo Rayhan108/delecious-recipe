@@ -12,19 +12,19 @@ const NavigationBar = () => {
         className="mt-3 mb-3 p-3 "
         collapseOnSelect
         expand="lg"
-        bg="light"
-        variant="light"
+        bg="dark"
+        variant="dark"
       >
-        <Navbar.Brand href="#home">Delicious-Food-Recipe</Navbar.Brand>
+        <Navbar.Brand className="fs-2" href="#home">Delicious-Food-Recipe</Navbar.Brand>
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Link className="text-decoration-none text-black" to="/">
+              <Link className="text-decoration-none text-light fs-5 " to="/">
                 Home
               </Link>
 
-              <Link to="/blog" className="text-decoration-none ms-3 text-black">
+              <Link to="/blog" className="text-decoration-none ms-3 text-light fs-5">
                 Blog
               </Link>
             </Nav>
