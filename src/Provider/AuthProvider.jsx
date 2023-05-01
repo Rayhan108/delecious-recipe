@@ -8,7 +8,7 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const createUser = (email, password) => {
-        setLoader(true);
+       
         return createUserWithEmailAndPassword(auth, email, password);
       };
     const authInfo={createUser};
