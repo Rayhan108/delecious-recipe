@@ -7,8 +7,8 @@ import Footer from '../../pages/Home/shared/Footer/Footer';
 const Main = () => {
     return (
         <div>
-            <Header></Header>
             <NavigationBar></NavigationBar>
+            <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
