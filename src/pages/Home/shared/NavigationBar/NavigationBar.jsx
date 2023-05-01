@@ -8,7 +8,14 @@ import { AuthContext } from "../../../../Provider/AuthProvider";
 
 const NavigationBar = () => {
     const {user,logout}=useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
+    const handleLogOut=()=>{
+        logout()
+        .then()
+      .catch((error) => {
+          console.log(error.message);
+        });
+    }
   return (
     <div>
       <Navbar
@@ -37,10 +44,11 @@ const NavigationBar = () => {
           <FaUserCircle style={{fontSize:'2rem'}}></FaUserCircle>
           </Nav.Link>}
               </div>
-
-              <Link to="/login">
-                <Button to="/login" variant="secondary">Login</Button>
-              </Link>
+   
+              { user ?  <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
+        <Link to="/login"><Button variant="secondary">Login</Button></Link> 
+        }
+          
             </Nav>
           </Navbar.Collapse>
         </Container>
