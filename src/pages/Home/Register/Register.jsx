@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Register = () => {
+    const {createUser} =useContext(AuthContext)
+    console.log(createUser);
     return (
         <Container className='mt-5 mb-5'>
       
