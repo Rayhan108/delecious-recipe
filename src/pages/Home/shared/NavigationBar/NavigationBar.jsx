@@ -1,11 +1,14 @@
-import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import ActiveLink from "./ActiveLink/ActiveLink";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 
 const NavigationBar = () => {
+    const {user,logout}=useContext(AuthContext)
+    console.log(user);
   return (
     <div>
       <Navbar
@@ -30,9 +33,9 @@ const NavigationBar = () => {
             </Nav>
             <Nav>
               <div className="me-3">
-                <Nav.Link href="#deets">
-                  <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle>
-                </Nav.Link>
+              { user ?    <Image  style={{height:'40px'}} src={user.photoURL} roundedCircle />  :<Nav.Link href="#deets">
+          <FaUserCircle style={{fontSize:'2rem'}}></FaUserCircle>
+          </Nav.Link>}
               </div>
 
               <Link to="/login">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Register = () => {
-    const {createUser} =useContext(AuthContext)
+    const {createUser,updateUserData} =useContext(AuthContext)
     // console.log(createUser);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
@@ -21,7 +21,8 @@ const Register = () => {
         createUser(email,password)
         .then(result=>{
             const loggedUser = result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
+            updateUserData(result.user,name,photo)
           
             form.reset()
             setSuccess('Account has been created successfully')
