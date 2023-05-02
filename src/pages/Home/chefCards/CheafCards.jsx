@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CheafCards = ({allChef}) => {
@@ -7,7 +8,7 @@ const CheafCards = ({allChef}) => {
     const {chef_picture,chef_name,number_of_recipes,years_of_experience,like,chef_id} = allChef;
     return (
        
-                <Col className='col-lg-4' >
+                <Col lg={4} md={6} sm={1} >
                 <Card >
       <Card.Img variant="top" src={chef_picture} />
       <Card.Body>
@@ -20,7 +21,7 @@ const CheafCards = ({allChef}) => {
        Recipes:{number_of_recipes}
         </Card.Text>
         <Card.Text className='fs-5'>
-       {like} Likes
+        <FaThumbsUp className='text-primary'></FaThumbsUp> {like} Likes
         </Card.Text>
 
         <Link to={`/${chef_id}`}><Button variant="primary">View Recipes</Button></Link>

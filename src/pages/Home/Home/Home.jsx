@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CheafCards from '../chefCards/CheafCards';
 import { Container, Row } from 'react-bootstrap';
 import TodaysPic from '../TodaysPick/TodaysPic';
+import BestChef from '../BestChef/BestChef';
 
 
 const Home = () => {
@@ -26,6 +27,16 @@ const Home = () => {
         </Row>
         <h1 className='mb-5 mt-5  text-center'>Todays Pic</h1>
         <TodaysPic></TodaysPic>
+        <div className='mb-5 mt-5'>
+<h1 className='text-center mb-3'> <span className='orange'>meet our experts</span> <br /> Our Best Chef </h1>
+<Row>
+  
+{
+            allChefs.map(chef=><BestChef  key={chef.chef_id} chef={chef}></BestChef>).slice(0,3)
+          }
+</Row>
+     
+        </div>
       </Container>
     );
 };
