@@ -10,7 +10,7 @@ const Home = () => {
  const [allChefs,setAllChefs] =useState([])
 
  useEffect(()=>{
-    fetch('http://localhost:5000/alldata/')
+    fetch('https://assignment10-server-rayhan108.vercel.app/alldata/')
     .then(res=>res.json())
     .then(data=>setAllChefs(data))
     .catch(error=>console.log(error))
