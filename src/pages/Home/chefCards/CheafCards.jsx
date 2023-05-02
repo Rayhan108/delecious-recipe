@@ -24,7 +24,7 @@ const CheafCards = ({allChef}) => {
         <FaThumbsUp className='text-primary'></FaThumbsUp> {like} Likes
         </Card.Text>
 
-        <Link to={`/${chef_id}`}><Button variant="primary">View Recipes</Button></Link>
+        <Link to={`/details/${chef_id}`}><Button variant="primary">View Recipes</Button></Link>
       </Card.Body>
     </Card>
                 </Col>
