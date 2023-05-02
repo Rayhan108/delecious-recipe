@@ -9,3 +9,16 @@
 .green{
     color: green;
 }
+.text-black{
+    color:black;
+}
+.orange{
+    color: orange;
+}
+.gray{
+    background-color: rgb(150, 143, 143);
+}
+.background{
+    background-image:url('https://img.freepik.com/free-photo/top-view-meal-with-rice-onion_23-2148747621.jpg?w=1060&t=st=1683012819~exp=1683013419~hmac=009920cb7be45158ba174a8eabe29bffcc08b65b432b09ecee8b5938f3cd45b1');
+    background-repeat: no-repeat;
+}
