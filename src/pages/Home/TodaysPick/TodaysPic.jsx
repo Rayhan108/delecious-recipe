@@ -6,37 +6,37 @@ const TodaysPic = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
+            src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?w=1060&t=st=1683046519~exp=1683047119~hmac=96435f6e5c9e38f46935659811b4449d4ab152fbb051e49208f7d08a9a1fa24a"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Chicken Fry</h3>
+            <p>baked-chicken-with-cucumber-lemon-seasoning-bread</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="https://img.freepik.com/free-photo/high-angle-tasty-pakistani-dish_23-2148825123.jpg?w=1380&t=st=1683046703~exp=1683047303~hmac=8581dfb6cbac453b503582b2ee4afd39617a471daa1e322e483b6a114f5f99db"
             alt="Second slide"
           />
   
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>chicken meal</h3>
+            <p>Delicious chicken curry with nun</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="https://img.freepik.com/free-photo/selection-food-tray_1340-23421.jpg?w=1060&t=st=1683046804~exp=1683047404~hmac=0958542f1506626cc0da32f7185337b57e6d7a906a79e7775d35927383fbbf4d"
             alt="Third slide"
           />
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Mutton Curry</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              mutton curry with bread.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
