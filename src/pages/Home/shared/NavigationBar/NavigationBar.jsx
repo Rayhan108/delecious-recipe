@@ -19,7 +19,7 @@ const NavigationBar = () => {
   return (
     <div>
       <Navbar
-        className="mt-3  p-3 "
+        className="  p-3 "
         collapseOnSelect
         expand="lg"
         bg="dark"
