@@ -7,6 +7,7 @@ import Login from "../../pages/Home/Login/Login";
 import Register from "../../pages/Home/Register/Register";
 import ChefDetails from "../../pages/Home/ChefDetails/ChefDetails";
 import DetailsLayout from "../../layout/detailsLayout/DetailsLayout";
+import LoginLayout from "../../layout/LoginLayout/LoginLayout";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +19,6 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/blog",
-        element:<>This is blog</>,
-      },
-      {
         path: "/login",
         element:<Login></Login>,
       },
@@ -29,8 +26,14 @@ const router = createBrowserRouter([
         path: "/register",
         element:<Register></Register>,
       },
+      {
+        path: "/blog",
+        element:<>This is blog</>,
+      },
+  
     ],
   },
+
   {
     path:"/details",
     element:<DetailsLayout></DetailsLayout>,
@@ -40,7 +43,8 @@ const router = createBrowserRouter([
         path:"/details/:id",
         element: <ChefDetails></ChefDetails>,
         loader:({params})=>fetch(`https://assignment10-server-rayhan108.vercel.app/alldata/${params.id}`)
-      }
+      },  
+       
     ]
   }
 ]);

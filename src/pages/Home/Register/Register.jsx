@@ -42,51 +42,53 @@ const Register = () => {
         })
     }
     return (
-        <Container className='mt-5 mb-5'>
+    <div className="gray p-5">
+          <Container className='mb-5'>
       
-        <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
-        <h3 className='mb-5'>Please Register</h3>
-  <Form.Group className="mb-3" controlId="formBasicName">
-    <Form.Label>Name</Form.Label>
-    <Form.Control type="text" name="name" placeholder="Your Name" required />
-  
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicPhoto">
-    <Form.Label>Photo Url</Form.Label>
-    <Form.Control type="text" name="photo" placeholder="Photo Url" required  />
-  
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" name="email" placeholder="Enter email"   />
-  
-  </Form.Group>
+      <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
+      <h3 className='mb-5'>Please Register</h3>
+<Form.Group className="mb-3" controlId="formBasicName">
+  <Form.Label>Name</Form.Label>
+  <Form.Control type="text" name="name" placeholder="Your Name" required />
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" name="password" placeholder="Password" />
-  
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Accept all terms & condition" />
-  </Form.Group>
-  <Button  className='mb-2' variant="primary" type="submit" >
-   Register
-  </Button>
-  <br />
-  <Form.Text>
-    Already have an account?Go <Link to="/login">Login</Link>
+</Form.Group>
+<Form.Group className="mb-3" controlId="formBasicPhoto">
+  <Form.Label>Photo Url</Form.Label>
+  <Form.Control type="text" name="photo" placeholder="Photo Url" required  />
+
+</Form.Group>
+<Form.Group className="mb-3" controlId="formBasicEmail">
+  <Form.Label>Email address</Form.Label>
+  <Form.Control type="email" name="email" placeholder="Enter email"   />
+
+</Form.Group>
+
+<Form.Group className="mb-3" controlId="formBasicPassword">
+  <Form.Label>Password</Form.Label>
+  <Form.Control type="password" name="password" placeholder="Password" />
+
+</Form.Group>
+<Form.Group className="mb-3" controlId="formBasicCheckbox">
+  <Form.Check type="checkbox" label="Accept all terms & condition" />
+</Form.Group>
+<Button  className='mb-2' variant="primary" type="submit" >
+ Register
+</Button>
+<br />
+<Form.Text>
+  Already have an account?Go <Link to="/login">Login</Link>
+</Form.Text>
+<br />
+<Form.Text className="green ">
+  {success}
   </Form.Text>
-  <br />
-  <Form.Text className="green ">
-    {success}
-    </Form.Text>
-  <br />
-  <Form.Text className="text-danger ">
-    {error}
-    </Form.Text>
+<br />
+<Form.Text className="text-danger ">
+  {error}
+  </Form.Text>
 </Form>
-    </Container>
+  </Container>
+    </div>
     );
 };
 

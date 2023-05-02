@@ -65,7 +65,8 @@ const Login = () => {
   };
 
   return (
-    <Container className="mt-5 mb-5">
+<div className="gray">
+<Container className="p-5 ">
       <Form onSubmit={handleLogin} className="w-50 mx-auto">
         <h3 className="mb-5">Please Login</h3>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -114,6 +115,7 @@ const Login = () => {
         </div>
       </Form>
     </Container>
+</div>
   );
 };
 

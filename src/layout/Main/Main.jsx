@@ -10,7 +10,7 @@ const Main = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <Header></Header>
+           
        <div>
        {
     navigation.state === "loading" ? <Spinner animation="border" />: ""

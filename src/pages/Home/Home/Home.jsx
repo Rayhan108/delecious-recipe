@@ -4,6 +4,7 @@ import CheafCards from '../chefCards/CheafCards';
 import { Container, Row } from 'react-bootstrap';
 import TodaysPic from '../TodaysPick/TodaysPic';
 import BestChef from '../BestChef/BestChef';
+import Header from '../shared/Header/Header';
 
 
 const Home = () => {
@@ -17,7 +18,10 @@ const Home = () => {
  },[])
 //  console.log(allChefs);
     return (
-      <Container className='mt-5 h-100 mb-5'>
+      
+  <div>
+    <Header></Header>
+        <Container className='mt-5 h-100 mb-5'>
 <h1 className='mb-5  text-center'>Popular chef in Bangladesh</h1>
           <Row >
           {
@@ -38,6 +42,7 @@ const Home = () => {
      
         </div>
       </Container>
+  </div>
     );
 };
 
