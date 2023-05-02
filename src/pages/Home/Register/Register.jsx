@@ -8,6 +8,7 @@ const Register = () => {
     // console.log(createUser);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    
 
     const handleSubmit =(event)=>{
         event.preventDefault()
@@ -17,7 +18,16 @@ const Register = () => {
         const name =form.name.value;
         const photo =form.photo.value;
         const email =form.email.value;
-        const password = form.password.value;
+         const password = form.password.value;
+
+        if(!email){
+          setError("Please Provide an email")
+          return;
+        }else if(!password){
+          setError("Please type a password")
+          return;
+        }
+        
         createUser(email,password)
         .then(result=>{
             const loggedUser = result.user;
@@ -48,13 +58,13 @@ const Register = () => {
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" name="email" placeholder="Enter email" required  />
+    <Form.Control type="email" name="email" placeholder="Enter email"   />
   
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control type="password" name="password" placeholder="Password" required />
+    <Form.Control type="password" name="password" placeholder="Password" />
   
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">

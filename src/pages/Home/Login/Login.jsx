@@ -3,11 +3,14 @@ import { Button, Container, Form } from "react-bootstrap";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const { login } = useContext(AuthContext);
+  const { login,googleLogin,setUser, githubSignIn } = useContext(AuthContext);
+  const provider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider()
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -25,6 +28,36 @@ const Login = () => {
         form.reset();
 
         setSuccess(" Login successfull");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+
+  const handleGoogleLogin = () => {
+    setError("");
+    setSuccess("");
+    googleLogin(provider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        // console.log(user);
+        setSuccess("Login Succesfull");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+  const handleGithubSignIn = () => {
+    setError("");
+    setSuccess("");
+    githubSignIn(githubProvider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        // console.log(user);
+        setSuccess("Login Succesfull");
       })
       .catch((error) => {
         setError(error.message);
@@ -69,12 +102,12 @@ const Login = () => {
 
         <div className="mt-3 mb-3">
           <div>
-            <Button className="mt-2 mb-2" variant="outline-primary">
+            <Button onClick={handleGoogleLogin} className="mt-2 mb-2" variant="outline-primary">
               <FaGoogle /> Login with Google
             </Button>
           </div>
           <div>
-            <Button variant="outline-secondary">
+            <Button onClick={handleGithubSignIn} variant="outline-secondary">
               <FaGithub /> Login with github
             </Button>
           </div>
