@@ -1,6 +1,7 @@
-.active{
-    background-color: rgb(255, 0, 0);
-    text-decoration: underline;
+.navbar .active{
+    background-color: rgb(176, 176, 177);
+padding: 4px;
+border-radius: 5px;
 }
 
 .black{

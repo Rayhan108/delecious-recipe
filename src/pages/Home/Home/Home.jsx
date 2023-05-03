@@ -5,6 +5,7 @@ import { Container, Row } from 'react-bootstrap';
 import TodaysPic from '../TodaysPick/TodaysPic';
 import BestChef from '../BestChef/BestChef';
 import Header from '../shared/Header/Header';
+import "./Home.css"
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
         <TodaysPic></TodaysPic>
         <div className='mb-5 mt-5'>
 <h1 className='text-center mb-3'> <span className='orange'>meet our experts</span> <br /> Our Best Chef </h1>
-<Row>
+<Row >
   
 {
             allChefs.map(chef=><BestChef  key={chef.chef_id} chef={chef}></BestChef>).slice(0,3)
