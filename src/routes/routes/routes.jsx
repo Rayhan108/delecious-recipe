@@ -6,8 +6,8 @@ import App from "../../App";
 import Login from "../../pages/Home/Login/Login";
 import Register from "../../pages/Home/Register/Register";
 import ChefDetails from "../../pages/Home/ChefDetails/ChefDetails";
-import DetailsLayout from "../../layout/detailsLayout/DetailsLayout";
-import LoginLayout from "../../layout/LoginLayout/LoginLayout";
+;
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +18,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+      {
+        path:"/:id",
+        element: <ChefDetails></ChefDetails>,
+        loader:({params})=>fetch(`https://assignment10-server-rayhan108.vercel.app/alldata/${params.id}`)
+      },  
       {
         path: "/login",
         element:<Login></Login>,
@@ -34,19 +39,6 @@ const router = createBrowserRouter([
     ],
   },
 
-  {
-    path:"/details",
-    element:<DetailsLayout></DetailsLayout>,
-    children:[
-
-      {
-        path:"/details/:id",
-        element: <ChefDetails></ChefDetails>,
-        loader:({params})=>fetch(`https://assignment10-server-rayhan108.vercel.app/alldata/${params.id}`)
-      },  
-       
-    ]
-  }
 ]);
 
 export default router;

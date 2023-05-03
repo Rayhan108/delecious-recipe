@@ -22,7 +22,7 @@ const ChefDetails = () => {
             <p className='fs-5'> Recipes:{number_of_recipes}</p>
           </div>
         </Col>
-        <Col sm={12} md={6} className="p-3">
+        <Col sm={12} md={6} className="p-3 d-flex align-items-center">
           <Image className='circle' src={chef_picture} alt="Banner" fluid />
         </Col>
       </Row>
