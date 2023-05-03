@@ -3,6 +3,7 @@ import { Col, Container, Image, ListGroup, Row } from "react-bootstrap";
 import { FaThumbsUp } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 const ChefDetails = () => {
@@ -46,7 +47,7 @@ const ChefDetails = () => {
             </div>
           </Col>
           <Col sm={12} md={6} className="p-3 d-flex align-items-center">
-            <Image className="circle" src={chef_picture} alt="Banner" fluid />
+            <LazyLoadImage className="circle img-fluid" src={chef_picture} alt="Banner"  />
           </Col>
         </Row>
       </Container>

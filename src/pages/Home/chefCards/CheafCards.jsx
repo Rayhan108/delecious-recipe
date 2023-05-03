@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
 import { FaThumbsUp } from 'react-icons/fa';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 const CheafCards = ({allChef}) => {
@@ -10,7 +11,7 @@ const CheafCards = ({allChef}) => {
        
                 <Col lg={4} md={6} sm={1} >
                 <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
-      <Card.Img variant="top" src={chef_picture} />
+      <LazyLoadImage variant="top" src={chef_picture} />
       <Card.Body>
      
      <Card.Title className='fs-4'>{chef_name}</Card.Title>
