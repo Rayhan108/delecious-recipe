@@ -20,16 +20,13 @@ border-radius: 5px;
     background-color: rgb(224, 236, 241);
 }
 .background{
-    /* background-image:url('https://img.freepik.com/free-photo/top-view-world-tourism-day-concept-with-copy-space_23-2148608884.jpg?w=1380&t=st=1683013932~exp=1683014532~hmac=216dc7c3a358c22dd4575ebfc8cdaddf590727a783b570dcc4aeff2d3d2e06b8'); */
+ 
   
     background-image:url('https://i.ibb.co/c2XTTdn/top-view-fried-chicken-fries-with-copy-space-1-copy-1.jpg');
     background-repeat: no-repeat;
    
 }
-/* .bg-img{
-    background-image:url('https://img.freepik.com/free-photo/top-view-fried-chicken-fries-with-copy-space_23-2148699072.jpg?w=1380&t=st=1683019137~exp=1683019737~hmac=d15e7bf9f0878fdcd0b1619374dc6a5ef63be97790e7dc41ea6973f0162862f2');
-    background-repeat: no-repeat;
-} */
+
 .circle{
     clip-path: circle();
 }

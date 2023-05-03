@@ -9,7 +9,7 @@ I created this site by using vite , react router v6.10.0 and react bootstrap.We 
 - **React Icons**
 - **React toastify**
 - **react-lazy-load-image-component**
-- **React Icons**
+- **react-to-print**
 
 
 

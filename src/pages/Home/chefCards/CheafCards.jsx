@@ -11,7 +11,7 @@ const CheafCards = ({allChef}) => {
        
                 <Col lg={4} md={6} sm={1} >
                 <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
-      <LazyLoadImage variant="top" src={chef_picture} />
+      <LazyLoadImage effect='blur' className='img-fluid' variant="top" src={chef_picture} />
       <Card.Body>
      
      <Card.Title className='fs-4'>{chef_name}</Card.Title>

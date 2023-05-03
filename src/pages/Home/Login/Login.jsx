@@ -33,6 +33,7 @@ const Login = () => {
         setSuccess(" Login successfull");
       })
       .catch((error) => {
+        // console.log(error.message);
         setError(error.message);
       });
   };
@@ -102,9 +103,9 @@ const Login = () => {
           Didn't have an account?Go <Link to="/register">Register</Link>
         </Form.Text>
         <br />
-        <Form.Text className="green ">{success}</Form.Text>
+        <Form.Text className="green  fs-5">{success}</Form.Text>
         <br />
-        <Form.Text className="text-danger ">{error}</Form.Text>
+        <Form.Text className="text-danger  fs-5 ">{error}</Form.Text>
 
         <div className="mt-3 mb-3">
           <div>

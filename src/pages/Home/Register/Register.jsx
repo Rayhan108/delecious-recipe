@@ -84,11 +84,11 @@ const Register = () => {
   Already have an account?Go <Link to="/login">Login</Link>
 </Form.Text>
 <br />
-<Form.Text className="green ">
+<Form.Text className="green  fs-5">
   {success}
   </Form.Text>
 <br />
-<Form.Text className="text-danger ">
+<Form.Text className="text-danger  fs-5">
   {error}
   </Form.Text>
 </Form>

@@ -31,7 +31,7 @@ const NavigationBar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto ">
               <NavLink
-                className="text-decoration-none text-light fs-5  "
+                className="text-decoration-none text-light fs-5 fw-bold "
                 to="/"
               >
                 Home
@@ -39,7 +39,7 @@ const NavigationBar = () => {
 
               <NavLink
                 to="/blog"
-                className="text-decoration-none ms-3 text-light fs-5"
+                className="text-decoration-none ms-3 text-light fs-5 fw-bold"
               >
                 Blog
               </NavLink>
