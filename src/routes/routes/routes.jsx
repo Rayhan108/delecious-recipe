@@ -8,6 +8,7 @@ import Register from "../../pages/Home/Register/Register";
 import ChefDetails from "../../pages/Home/ChefDetails/ChefDetails";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ErrorPage from "../../pages/Home/ErrorPage/ErrorPage";
+import Blog from "../../pages/Home/Blog/Blog";
 ;
 
 
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element:<>This is blog</>,
+        element:<Blog></Blog>,
       },
   
     ],
