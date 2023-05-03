@@ -4,11 +4,11 @@ import { Button, Card, Col } from "react-bootstrap";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
-import { FaEye } from "react-icons/fa";
+
 import { FcLike } from "react-icons/fc";
 
 const Recipe = ({ recipe }) => {
-  console.log(recipe);
+  // console.log(recipe);
   const { recipe_name, cooking_method, ingredients, rating } = recipe;
   return (
     <Col>

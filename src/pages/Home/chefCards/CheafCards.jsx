@@ -9,7 +9,7 @@ const CheafCards = ({allChef}) => {
     return (
        
                 <Col lg={4} md={6} sm={1} >
-                <Card style={{height:"400"}} >
+                <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
       <Card.Img variant="top" src={chef_picture} />
       <Card.Body>
      

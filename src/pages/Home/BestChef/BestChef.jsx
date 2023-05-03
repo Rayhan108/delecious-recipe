@@ -8,7 +8,7 @@ const BestChef = ({chef}) => {
 const {chef_picture,chef_name,like} = chef;
     return (
               <Col lg={4} sm={1} >
-                <Card >
+                <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
       <Card.Img variant="top" src={chef_picture} />
       <Card.Body>
      
