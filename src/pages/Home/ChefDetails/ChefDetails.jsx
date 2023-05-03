@@ -4,6 +4,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 
+
 const ChefDetails = () => {
   const chefDetail = useLoaderData();
   // console.log(chefDetail);
@@ -49,6 +50,7 @@ const ChefDetails = () => {
           </Col>
         </Row>
       </Container>
+      <h1 className="text-center mt-5 mb-5">Recipes</h1>
       <Row>
         {
 recipes.map((recipe,idx)=><Recipe key={idx} recipe={recipe}></Recipe>)

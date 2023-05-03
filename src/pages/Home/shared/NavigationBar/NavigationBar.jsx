@@ -39,7 +39,7 @@ const NavigationBar = () => {
             </Nav>
             <Nav>
               <div className="me-3">
-               {user &&    <Image  style={{height:'40px'}} src={user.photoURL} roundedCircle />} 
+               {user &&    <Image  style={{height:'40px'}} src={user.photoURL} className="circle" />} 
             
               </div>
    

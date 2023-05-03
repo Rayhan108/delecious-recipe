@@ -4,7 +4,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CheafCards = ({allChef}) => {
-    console.log(allChef);
+    // console.log(allChef);
     const {chef_picture,chef_name,number_of_recipes,years_of_experience,like,chef_id} = allChef;
     return (
        

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Register = () => {
@@ -8,7 +8,10 @@ const Register = () => {
     // console.log(createUser);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    
+    const location =useLocation();
+    // console.log(location);
+    const navigate = useNavigate();
+    let from =  "/";
 
     const handleSubmit =(event)=>{
         event.preventDefault()
@@ -32,6 +35,7 @@ const Register = () => {
         .then(result=>{
             const loggedUser = result.user;
             // console.log(loggedUser);
+            navigate(from)
             updateUserData(result.user,name,photo)
           
             form.reset()
@@ -40,6 +44,7 @@ const Register = () => {
         .catch(error=>{
             setError(error.message)
         })
+        
     }
     return (
     <div className="gray p-5">

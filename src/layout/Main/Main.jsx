@@ -13,7 +13,7 @@ const Main = () => {
            
        <div>
        {
-    navigation.state === "loading" ? <Spinner animation="border" />: ""
+    navigation.state === "loading" ? <Spinner  animation="border" variant="secondary" />: ""
                 }
        </div>
             <Outlet></Outlet>
