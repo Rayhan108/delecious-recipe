@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, Col } from "react-bootstrap";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
@@ -10,25 +10,19 @@ import { FcLike } from "react-icons/fc";
 
 const Recipe = ({ recipe }) => {
   // console.log(recipe);
-  const [recipeId,setRecipeId] = useState([]);
-  const [stored,setStored]= useState(false);
-  const { recipe_name, cooking_method, ingredients, rating,id } = recipe;
-  const handleFvrt=(id)=>{
+  const [recipeId, setRecipeId] = useState([]);
+  const { recipe_name, cooking_method, ingredients, rating, id } = recipe;
+  const handleFvrt = (id) => {
     // console.log(id);
-    setRecipeId([...recipeId,id]);
-    const storedId = recipeId?.find((n)=>n==id);
-    // console.log(storedId);
-    if(storedId){
-      setStored(storedId)
-    } else{
-      // alert('favourite successfull');
+    setRecipeId([...recipeId, id]);
+   
+    if (recipeId) {
       toast("Added Favourite!");
-      setStored(storedId);
-    }
-  }
+    } 
+  };
   return (
     <Col>
-      <Card style={{ height: "750px",padding:"10px",marginBottom:"15px" }}>
+      <Card style={{ height: "750px", padding: "10px", marginBottom: "15px" }}>
         <Card.Body>
           <Card.Title className="fs-4">{recipe_name}</Card.Title>
           <Card.Text>
@@ -55,12 +49,14 @@ const Recipe = ({ recipe }) => {
           </div>
         </Card.Body>
 
-       
-       <Button onClick={()=>handleFvrt(id)} disabled={recipeId == id} className="fs-5">
-          Add Favourite <FcLike   className='fs-3'></FcLike>
+        <Button
+          onClick={() => handleFvrt(id)}
+          disabled={recipeId == id}
+          className="fs-5"
+        >
+          Add Favourite <FcLike className="fs-3"></FcLike>
         </Button>
-          <ToastContainer></ToastContainer>
-       
+        <ToastContainer></ToastContainer>
       </Card>
     </Col>
   );
