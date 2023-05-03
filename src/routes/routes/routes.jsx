@@ -7,6 +7,7 @@ import Login from "../../pages/Home/Login/Login";
 import Register from "../../pages/Home/Register/Register";
 import ChefDetails from "../../pages/Home/ChefDetails/ChefDetails";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import ErrorPage from "../../pages/Home/ErrorPage/ErrorPage";
 ;
 
 
@@ -14,6 +15,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
+    
     children: [
       {
         path: "/",

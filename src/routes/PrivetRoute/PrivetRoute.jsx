@@ -8,7 +8,7 @@ const PrivetRoute = ({children}) => {
     const location = useLocation();
 
     if(loader){
-        return <Spinner  animation="border" variant="secondary" />
+        return <div className='d-flex justify-content-center mt-5 mb-5'><Spinner  animation="border" variant="secondary" /></div>
     }
     
       if (user) {
