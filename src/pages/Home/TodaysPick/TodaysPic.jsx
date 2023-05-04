@@ -1,48 +1,65 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+// import Swiper styles
+import "swiper/css";
+import "swiper/swiper-bundle.min.css";
 const TodaysPic = () => {
-    return (
-        <Carousel>
-        <Carousel.Item>
+  return (
+    <div>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={10}
+        slidesPerView={2}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+      >
+        <SwiperSlide>
           <LazyLoadImage
-            className="d-block w-100"
-            src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?w=1060&t=st=1683046519~exp=1683047119~hmac=96435f6e5c9e38f46935659811b4449d4ab152fbb051e49208f7d08a9a1fa24a"
+            style={{ width: "100%" }}
+            className="d-block w-100  img-fluid"
+            src="https://img.freepik.com/free-photo/side-lamb-ragout-with-fried-onion-carrot-tomato-sauce-greens-vegetable-salad-table_141793-4744.jpg?w=1060&t=st=1683189125~exp=1683189725~hmac=fbec4011694bbe3f7b0bacab7dc20c3e9020f1983cc990834cbfeaebd2cacbf8"
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>Chicken Fry</h3>
-            <p>baked-chicken-with-cucumber-lemon-seasoning-bread</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
+        </SwiperSlide>
+        <SwiperSlide>
           <LazyLoadImage
-            className="d-block w-100"
-            src="https://img.freepik.com/free-photo/high-angle-tasty-pakistani-dish_23-2148825123.jpg?w=1380&t=st=1683046703~exp=1683047303~hmac=8581dfb6cbac453b503582b2ee4afd39617a471daa1e322e483b6a114f5f99db"
-            alt="Second slide"
+            style={{ width: "100%" }}
+            className="d-block w-100  img-fluid"
+            src="https://img.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg?w=1060&t=st=1683183211~exp=1683183811~hmac=2500d6aa9ddf36fd9c2c61dda6dff4ba6a94d6ac7905c9a8fda452e19e0a4b6b"
+            alt="First slide"
           />
-  
-          <Carousel.Caption>
-            <h3>chicken meal</h3>
-            <p>Delicious chicken curry with nun</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
+        </SwiperSlide>
+        <SwiperSlide>
           <LazyLoadImage
-            className="d-block w-100"
+            style={{ width: "100%" }}
+            className="d-block w-100  img-fluid"
             src="https://img.freepik.com/free-photo/selection-food-tray_1340-23421.jpg?w=1060&t=st=1683046804~exp=1683047404~hmac=0958542f1506626cc0da32f7185337b57e6d7a906a79e7775d35927383fbbf4d"
-            alt="Third slide"
+            alt="First slide"
           />
-  
-          <Carousel.Caption>
-            <h3>Mutton Curry</h3>
-            <p>
-              mutton curry with bread.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    );
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <LazyLoadImage
+            style={{ width: "100%" }}
+            className="d-block w-100  img-fluid"
+            src="https://img.freepik.com/free-photo/flat-lay-indian-food-frame_23-2148747715.jpg?w=1060&t=st=1683189444~exp=1683190044~hmac=45223aa85c75fde57ab1886c4820cb2bf511c5db486cd721515e134e94b839a1"
+            alt="First slide"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <LazyLoadImage
+            style={{ width: "100%" }}
+            className="d-block w-100  img-fluid"
+            src="https://img.freepik.com/free-photo/plate-food-with-different-dishes-including-chicken-rice-other-food_1340-24267.jpg?w=1060&t=st=1683189530~exp=1683190130~hmac=caca1a163845706813da68507a39e913f4ca2d8c1a90882660c851b5e9d868a6"
+            alt="First slide"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
 };
 
 export default TodaysPic;

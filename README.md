@@ -10,6 +10,7 @@ I created this site by using vite , react router v6.10.0 and react bootstrap.We 
 - **React toastify**
 - **react-lazy-load-image-component**
 - **react-to-print**
+- **swiper**
 
 
 
@@ -25,4 +26,4 @@ I created this site by using vite , react router v6.10.0 and react bootstrap.We 
 
  - **vercel server  Site Link**:  https://assignment10-server-rayhan108.vercel.app/alldata/
 
-  - **Firebase Client Site Live Link**:
+  - **Firebase Client Site Live Link**: 
