@@ -9,7 +9,7 @@ import ChefDetails from "../../pages/Home/ChefDetails/ChefDetails";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ErrorPage from "../../pages/Home/ErrorPage/ErrorPage";
 import Blog from "../../pages/Home/Blog/Blog";
-;
+
 
 
 const router = createBrowserRouter([
@@ -24,11 +24,6 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"/:id",
-        element: <PrivetRoute><ChefDetails></ChefDetails></PrivetRoute>,
-        loader:({params})=>fetch(`https://assignment10-server-rayhan108.vercel.app/alldata/${params.id}`)
-      },  
-      {
         path: "/login",
         element:<Login></Login>,
       },
@@ -40,7 +35,11 @@ const router = createBrowserRouter([
         path: "/blog",
         element:<Blog></Blog>,
       },
-  
+      {
+        path:"home/:id",
+        element: <PrivetRoute><ChefDetails></ChefDetails></PrivetRoute>,
+        loader:({params})=>fetch(`https://assignment10-server-rayhan108.vercel.app/alldata/${params.id}`)
+      },   
     ],
   },
 

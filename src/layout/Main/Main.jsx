@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../pages/Home/shared/Header/Header';
 import NavigationBar from '../../pages/Home/shared/NavigationBar/NavigationBar';
 import { Outlet, useNavigation } from 'react-router-dom';
 import Footer from '../../pages/Home/shared/Footer/Footer';

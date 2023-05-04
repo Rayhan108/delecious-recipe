@@ -56,7 +56,7 @@ const Recipe = ({ recipe }) => {
         >
           Add Favourite <FcLike className="fs-3"></FcLike>
         </Button>
-        <ToastContainer></ToastContainer>
+        <ToastContainer ></ToastContainer>
       </Card>
     </Col>
   );

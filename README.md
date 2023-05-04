@@ -26,4 +26,5 @@ I created this site by using vite , react router v6.10.0 and react bootstrap.We 
 
  - **vercel server  Site Link**:  https://assignment10-server-rayhan108.vercel.app/alldata/
 
-  - **Firebase Client Site Live Link**: 
+  - **Firebase Client Site Live Link**: https://assignment10-2ab6b.web.app/
+

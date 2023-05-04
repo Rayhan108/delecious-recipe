@@ -1,7 +1,8 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from "swiper";
+
 // import Swiper styles
 import "swiper/css";
 import "swiper/swiper-bundle.min.css";
@@ -9,11 +10,12 @@ const TodaysPic = () => {
   return (
     <div>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
         spaceBetween={10}
         slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{delay:1000}}
         scrollbar={{ draggable: true }}
       >
         <SwiperSlide>

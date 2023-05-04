@@ -11,7 +11,9 @@ const CheafCards = ({allChef}) => {
        
                 <Col lg={4} md={6} sm={1} >
                 <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
-      <LazyLoadImage effect='blur' className='img-fluid' variant="top" src={chef_picture} />
+      <LazyLoadImage  style={{ width: "100%" ,height:"100%"}} effect='blur' className='img-fluid' variant="top" src={chef_picture}
+
+      />
       <Card.Body>
      
      <Card.Title className='fs-4'>{chef_name}</Card.Title>
@@ -25,7 +27,7 @@ const CheafCards = ({allChef}) => {
         <FaThumbsUp className='text-primary'></FaThumbsUp> {like} Likes
         </Card.Text>
 
-        <Link to={`/${chef_id}`}><Button variant="primary">View Recipes</Button></Link>
+        <Link to={`/home/${chef_id}`}><Button variant="primary">View Recipes</Button></Link>
       </Card.Body>
     </Card>
                 </Col>
