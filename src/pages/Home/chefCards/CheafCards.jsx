@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col,  } from 'react-bootstrap';
 import { FaThumbsUp } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Header = () => {
     return (
@@ -18,7 +18,7 @@ const Header = () => {
    </Col>
    <Col sm={12} md={6} className="p-3">
    
-            <LazyLoadImage   className='img-fluid justify-content-center align-items-center mt-5' src="https://img.freepik.com/free-photo/delicious-indian-food-tray-flat-lay_23-2148723508.jpg?w=900&t=st=1683008389~exp=1683008989~hmac=7c3a56775eb4e95f7a668a6201487c8d874c4af1c2033d83307dedf06a6f26e1" alt="" 
+            <Image   className='img-fluid justify-content-center align-items-center mt-5' src="https://img.freepik.com/free-photo/delicious-indian-food-tray-flat-lay_23-2148723508.jpg?w=900&t=st=1683008389~exp=1683008989~hmac=7c3a56775eb4e95f7a668a6201487c8d874c4af1c2033d83307dedf06a6f26e1" alt="" 
             
             
             />

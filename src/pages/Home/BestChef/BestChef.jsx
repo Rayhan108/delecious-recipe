@@ -1,15 +1,14 @@
 import React from 'react';
-import { Card, Carousel, Col } from 'react-bootstrap';
+import { Card, Carousel, Col, Image } from 'react-bootstrap';
 import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 const BestChef = ({chef}) => {
 // console.log(chef);
 const {chef_picture,chef_name,like} = chef;
     return (
               <Col lg={4} sm={1} >
                 <Card  style={{ height: "550px",padding:"10px",marginBottom:"15px" }} >
-      <LazyLoadImage variant="top" src={chef_picture} />
+      <Image variant="top" src={chef_picture} />
       <Card.Body>
      
      <Card.Title className='fs-4'>{chef_name}</Card.Title>
